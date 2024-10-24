@@ -6,11 +6,10 @@
 /*   By: gtretiak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 13:27:59 by gtretiak          #+#    #+#             */
-/*   Updated: 2024/10/24 17:42:32 by gtretiak         ###   ########.fr       */
+/*   Updated: 2024/10/24 19:00:18 by gtretiak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 void	ft_putchar(char c)
