@@ -1,0 +1,8 @@
+find . -type f \( -name '#*#' -o -name '*~' \) -print -delete
+# find .     Searching in the current directory and its subdirectories
+# -type f    Searching files type "file", not a directory, for example
+# -name '#*#'   Searching files which start with "#" and end with "#"
+# -o    Logical operator "OR"
+# -name '*~'    Searching files ending with "~"
+# -print: It shows the founded files
+# -delete: It deletes the founded files
