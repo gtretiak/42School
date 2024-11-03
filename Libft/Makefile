@@ -10,7 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 OBJECTS = $(SRCS:.c=.o)
-SRCS = ft_putchar.c ft_putstr.c ft_strcmp.c ft_strlen.c ft_swap.c
+SRCS = ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isalpha.c ft_strlen.c ft_strncmp.c \
+       ft_isprint.c ft_toupper.c
 HEAD = libft.h
 NAME = libft.a
 CFLAGS = -Wall -Wextra -Werror -I
