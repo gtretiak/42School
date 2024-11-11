@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gtretiak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 15:43:54 by gtretiak          #+#    #+#             */
-/*   Updated: 2024/11/11 17:28:48 by gtretiak         ###   ########.fr       */
+/*   Created: 2024/11/04 15:00:37 by gtretiak          #+#    #+#             */
+/*   Updated: 2024/11/04 16:17:11 by gtretiak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
-char	**ft_split(char const *s, char c);
-
-int	main(void)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	s[] = "!!ab!.cd!!!!!!(yz)!!!";
-	char	c = '!';
-	printf("str:%s\nchar:%c\n", s, c);
-	printf("s1:%s\ns2:%s\ns3:%s\n", ft_split(s, c)[0], ft_split(s, c)[1], ft_split(s, c)[2]);
+	while (n)
+	{
+		if (*s1 != *s2)
+			return ((unsigned char) *s1 - (unsigned char) *s2);
+		if (*s1 == '\0')
+			return (0);
+		++s1;
+		++s2;
+		--n;
+	}
+	return (0);
 }

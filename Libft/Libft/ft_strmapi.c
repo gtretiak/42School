@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gtretiak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 15:43:54 by gtretiak          #+#    #+#             */
-/*   Updated: 2024/11/11 17:28:48 by gtretiak         ###   ########.fr       */
+/*   Created: 2024/11/04 19:06:44 by gtretiak          #+#    #+#             */
+/*   Updated: 2024/11/09 18:23:09 by gtretiak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
-char	**ft_split(char const *s, char c);
-
-int	main(void)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	s[] = "!!ab!.cd!!!!!!(yz)!!!";
-	char	c = '!';
-	printf("str:%s\nchar:%c\n", s, c);
-	printf("s1:%s\ns2:%s\ns3:%s\n", ft_split(s, c)[0], ft_split(s, c)[1], ft_split(s, c)[2]);
+	size_t	i;
+	char	*res;
+
+	res = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!res)
+		return (NULL);
+	i = 0;
+	while (i < ft_strlen(s))
+	{
+		res[i] = (*f)(i, s[i]);
+		i++;
+	}
+	res[i] = '\0';
+	return (res);
 }

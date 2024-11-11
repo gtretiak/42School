@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gtretiak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 15:43:54 by gtretiak          #+#    #+#             */
-/*   Updated: 2024/11/11 17:28:48 by gtretiak         ###   ########.fr       */
+/*   Created: 2024/11/04 19:10:40 by gtretiak          #+#    #+#             */
+/*   Updated: 2024/11/09 13:36:40 by gtretiak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
-char	**ft_split(char const *s, char c);
-
-int	main(void)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	s[] = "!!ab!.cd!!!!!!(yz)!!!";
-	char	c = '!';
-	printf("str:%s\nchar:%c\n", s, c);
-	printf("s1:%s\ns2:%s\ns3:%s\n", ft_split(s, c)[0], ft_split(s, c)[1], ft_split(s, c)[2]);
+	long	nb;
+	char	c;
+
+	nb = n;
+	if (nb < 0)
+	{
+		write(fd, "-", 1);
+		nb = -nb;
+	}
+	if (nb < 10)
+	{
+		c = nb + '0';
+		write(fd, &c, 1);
+	}
+	else
+	{
+		ft_putnbr_fd(nb / 10, fd);
+		ft_putnbr_fd(nb % 10, fd);
+	}
 }

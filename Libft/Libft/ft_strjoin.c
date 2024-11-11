@@ -1,25 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gtretiak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 15:43:54 by gtretiak          #+#    #+#             */
-/*   Updated: 2024/11/11 17:28:48 by gtretiak         ###   ########.fr       */
+/*   Created: 2024/11/04 19:03:55 by gtretiak          #+#    #+#             */
+/*   Updated: 2024/11/09 16:33:27 by gtretiak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
-char	**ft_split(char const *s, char c);
-
-int	main(void)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	s[] = "!!ab!.cd!!!!!!(yz)!!!";
-	char	c = '!';
-	printf("str:%s\nchar:%c\n", s, c);
-	printf("s1:%s\ns2:%s\ns3:%s\n", ft_split(s, c)[0], ft_split(s, c)[1], ft_split(s, c)[2]);
+	char	*str1;
+	char	*str2;
+	char	*joined;
+	size_t	i;
+
+	i = 0;
+	str1 = (char *)s1;
+	str2 = (char *)s2;
+	joined = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!joined)
+		return (NULL);
+	while (str1[i])
+	{
+		joined[i] = str1[i];
+		i++;
+	}
+	while (*str2)
+		joined[i++] = *str2++;
+	joined[i] = '\0';
+	return (joined);
 }

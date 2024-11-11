@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gtretiak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 15:43:54 by gtretiak          #+#    #+#             */
-/*   Updated: 2024/11/11 17:28:48 by gtretiak         ###   ########.fr       */
+/*   Created: 2024/11/04 19:01:50 by gtretiak          #+#    #+#             */
+/*   Updated: 2024/11/08 14:32:44 by gtretiak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
-char	**ft_split(char const *s, char c);
-
-int	main(void)
+void	*ft_calloc(size_t count, size_t size)
 {
-	char	s[] = "!!ab!.cd!!!!!!(yz)!!!";
-	char	c = '!';
-	printf("str:%s\nchar:%c\n", s, c);
-	printf("s1:%s\ns2:%s\ns3:%s\n", ft_split(s, c)[0], ft_split(s, c)[1], ft_split(s, c)[2]);
+	void	*s;
+	size_t	i;
+
+	s = malloc(count * size);
+	i = 0;
+	if (!s)
+		return (NULL);
+	while (i < (count * size))
+		((char *)s)[i++] = '\0';
+	return (s);
 }

@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gtretiak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 15:43:54 by gtretiak          #+#    #+#             */
-/*   Updated: 2024/11/11 17:28:48 by gtretiak         ###   ########.fr       */
+/*   Created: 2024/11/04 19:03:05 by gtretiak          #+#    #+#             */
+/*   Updated: 2024/11/11 17:26:48 by gtretiak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
-char	**ft_split(char const *s, char c);
-
-int	main(void)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	s[] = "!!ab!.cd!!!!!!(yz)!!!";
-	char	c = '!';
-	printf("str:%s\nchar:%c\n", s, c);
-	printf("s1:%s\ns2:%s\ns3:%s\n", ft_split(s, c)[0], ft_split(s, c)[1], ft_split(s, c)[2]);
+	char	*tmp;
+	size_t	i;
+
+	tmp = (char *)s;
+	if (!s || start > ft_strlen(s))
+		return (NULL);
+	if (start + len > ft_strlen(s))
+		len = ft_strlen(s + start);
+	tmp = malloc(sizeof(char) * (len + 1));
+	if (!tmp)
+		return (NULL);
+	i = 0;
+	while (len > i)
+		tmp[i++] = s[start++];
+	tmp[i] = '\0';
+	return (tmp);
 }
