@@ -1,0 +1,47 @@
+francinette:
+ℹ Running tests: fsoares (my own tests)
+BONUS!
+You have more than one static variable 
+Summary: 
+Failed tests: fsoares
+
+francinette --strict:
+ℹ Running tests: fsoares (my own tests)
+BUFFER_SIZE: 1
+empty.txt           : 1.OK 2.OK 3_LEAKS.OK 4.KO Segfault
+Segmentation fault (core dumped)
+make: [Makefile:23: mandatory] Error 139 (ignored)
+BUFFER_SIZE: 10
+empty.txt           : 1.OK 2.OK 3_LEAKS.OK 4.KO Segfault
+Segmentation fault (core dumped)
+make: [Makefile:24: mandatory] Error 139 (ignored)
+BUFFER_SIZE: 1000000
+empty.txt           : 1.OK 2.OK 3_LEAKS.OK 4.KO Segfault
+Segmentation fault (core dumped)
+make: [Makefile:25: mandatory] Error 139 (ignored)
+BONUS!
+BUFFER_SIZE: 1
+empty.txt           : 1.OK 2.OK 3_LEAKS.OK 4.KO Segfault
+Segmentation fault (core dumped)
+make: [Makefile:29: bonus] Error 139 (ignored)
+BUFFER_SIZE: 10
+empty.txt           : 1.OK 2.OK 3_LEAKS.OK 4.KO Segfault
+Segmentation fault (core dumped)
+make: [Makefile:30: bonus] Error 139 (ignored)
+BUFFER_SIZE: 1000000
+empty.txt           : 1.OK 2.OK 3_LEAKS.OK 4.KO Segfault
+Segmentation fault (core dumped)
+make: [Makefile:31: bonus] Error 139 (ignored)
+You have more than one static variable 
+Summary: 
+Failed tests: fsoares
+
+make gnlTester:
+[Mandatory]
+[BUFFER_SIZE = 1]: 
+files/big_line_no_nl: TIMEOUT
+files/big_line_with_nl: TIMEOUT
+[Bonus]
+files/big_line_no_nl: TIMEOUT
+files/big_line_with_nl: TIMEOUT
+
