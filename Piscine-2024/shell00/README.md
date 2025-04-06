@@ -58,11 +58,11 @@ git clone https://github.com/yourusername/shell00.git
 cd shell00
 2. Each exercise is contained in its own directory (ex00, ex01, etc.)
 3. To test specific exercises:
-# For exercise 00
+#### For exercise 00
 cd ex00
 cat z
 
-# For exercise 05
+#### For exercise 05
 cd ../ex05
 bash git_commit.sh
 ## Real-World Applications
