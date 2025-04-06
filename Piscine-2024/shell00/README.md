@@ -54,7 +54,7 @@ file: File type identification
 ## Setup Instructions
 
 1. Clone this repository:
-git clone https://github.com/gtretiak/42School/blob/main/Piscine-2024/Shell00/
+git clone https://github.com/gtretiak/42School/blob/main/Piscine-2024/shell00
 2. cd Shell00
 3. Each exercise is contained in its own directory (ex00, ex01, etc.)
 4. To test specific exercises:
