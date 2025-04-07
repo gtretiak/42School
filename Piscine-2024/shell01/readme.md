@@ -40,7 +40,7 @@ This project employs:
 
 ## Setup Instructions
 Clone this repository:
-git clone https://github.com/yourusername/shell01.git
+git clone https://github.com/gtretiak/42School/blob/main/Piscine-2024/shell01
 cd shell01
 Each exercise is contained in its own directory (ex01, ex02, etc.)
 Make all scripts executable:
