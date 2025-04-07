@@ -1,16 +1,12 @@
 # Shell 00: Introduction to Shell Commands and Git
 ## Project Overview
-Shell 00 is the first project in the 42 curriculum's C Piscine, designed to introduce fundamental Unix/Linux shell commands and Git version control basics. This project consists of 10 exercises that progressively teach essential skills for navigating command-line environments, manipulating files, understanding file permissions, and working with Git repositories.
+Shell 00 is the first project in the 42 curriculum's C Piscine, designed to introduce fundamental Unix/Linux shell commands and Git version control basics. This project's exercises progressively teach essential skills for navigating command-line environments, manipulating files, understanding file permissions, and working with Git repositories.
 ## Educational Objectives
 This project aims to:
-
-Familiarize students with basic shell commands
-
-Teach file manipulation and permissions in Unix/Linux systems
-
-Introduce version control concepts with Git
-
-Establish good practices for file management and documentation
+1) Familiarize students with basic shell commands
+2) Teach file manipulation and permissions in Unix/Linux systems
+3) Introduce version control concepts with Git
+4) Establish good practices for file management and documentation
 
 ## Key Concepts and Skills Demonstrated
 
