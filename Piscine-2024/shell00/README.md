@@ -5,8 +5,11 @@ Shell 00 is the first project in the 42 curriculum's C Piscine, designed to intr
 This project aims to:
 
 Familiarize students with basic shell commands
+
 Teach file manipulation and permissions in Unix/Linux systems
+
 Introduce version control concepts with Git
+
 Establish good practices for file management and documentation
 
 ## Key Concepts and Skills Demonstrated
@@ -85,6 +88,12 @@ The skills developed in this project are directly applicable to:
 4. Security Practices: Learning about file permissions and SSH key management introduces important security concepts
 5. Automation: Creating shell scripts to automate repetitive tasks is valuable in virtually any technical role
 6. Troubleshooting: Understanding how to examine file differences, find specific files, and check file types are critical troubleshooting skills
+
+## Examples:
+1. Detecting any crucial differences between files during code review, tracking legal documents, comparing current malfunctiong and previous well-working system configuration.
+2. Preventing sensitive data (API keys, credentials, etc.) from being accidentally committed, avoiding security breaches.
+3. Automatical finding and removing unnecessary (e.g. backup, temporary) files across the entire file system for saving valuable storage
+4. Handling multi-user file permission which allows necessary services to function and configuration files to prevent unauthorized access
 
 ## Conclusion
 Shell 00 establishes the fundamental command-line and version control skills that underpin virtually all software development and system administration tasks.
