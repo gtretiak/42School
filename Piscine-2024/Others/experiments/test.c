@@ -22,3 +22,6 @@ int	main()
 	printf("we can print as many words as we need in quotes");
 	return(0);
 }
+
+
+// When I first time realized that strings in C are essentially arrays of characters :)
