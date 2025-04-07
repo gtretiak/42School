@@ -7,7 +7,6 @@ This project aims to:
 Familiarize students with basic shell commands
 Teach file manipulation and permissions in Unix/Linux systems
 Introduce version control concepts with Git
-Develop problem-solving skills through practical exercises
 Establish good practices for file management and documentation
 
 ## Key Concepts and Skills Demonstrated
@@ -23,16 +22,15 @@ Shell Scripting: Writing simple shell scripts to automate tasks
 
 ## Exercise Breakdown
 
-Z: Creating a file with specific content using redirection
-testShell00: Setting specific file permissions and using tar for archiving
-Oh yeah, mooore...: Creating complex directory structures with specific permissions
-SSH me!: Generating and managing SSH keys for secure authentication
-midLS: Writing a command to list files in a specific format
-GiT commit: Creating a script to display recent Git commits
-gitignore: Developing a script to show files ignored by Git
-diff: Understanding file differences and patch operations
-clean: Using the find command to locate and remove temporary files
-ft_magic: Creating a magic file for file type detection
+ex00: Creating and printing on the standard output a file with specific content (touch, vim, cat)
+ex01: Setting specific file permissions, size, time-stamp and using tar for archiving (ls, touch, truncate, chmod, tar)
+ex02: Creating complex directory structures with specific permissions (mkdir, ln)
+ex03: Generating and managing SSH keys for secure authentication and using GIT
+ex04: Writing a command to list files in a specific format (ls)
+ex05: Creating a script to display recent Git commits (git log, #!/bin/bash)
+ex06: Developing a script to show files ignored by Git (git ls-files, .gitignore)
+ex07: Understanding file differences and patch operations (diff, sw.diff, patch, .patch)
+ex08: Using the find command to locate and remove temporary files (find)
 
 ## Technical Approach
 This project employs a minimalist approach focusing on:
@@ -45,7 +43,7 @@ Git Workflow: Structured approach to version control
 ## Technologies Used
 
 Shell: /bin/sh (Bourne shell)
-Core Unix Commands: ls, cat, chmod, mkdir, touch, tar, etc.
+Core Unix Commands: ls, cat, chmod, mkdir, touch, vim, tar, truncate, ln, etc.
 Git: Basic repository operations and configuration
 SSH: Key generation for secure authentication
 find: Pattern matching and file location
@@ -55,26 +53,39 @@ file: File type identification
 
 1. Clone this repository:
 git clone https://github.com/gtretiak/42School/blob/main/Piscine-2024/shell00
-2. cd Shell00
+2. cd shell00
 3. Each exercise is contained in its own directory (ex00, ex01, etc.)
 4. To test specific exercises:
 #### For exercise 00
-cd ex00
-cat z
-
+cd ex00; cat z
+#### For exercise 01
+append a new file with tar -rvf archive.tar newfile.txt
+list the container with tar -tvf archive.tar
+delete with tar --delete -f testShell00.tar newfile.txt
+#### For exercise 02
+list the container with tar -tvf archive.tar
+then try to rebuild all the files with exactly the same time-stamps, permissions and types (files, directories, hard and symbolic links)
+#### For exercise 04
+cat midLS; then use the command with options wherever you need
 #### For exercise 05
-cd ../ex05
 bash git_commit.sh
+#### For exercise 06
+bash git_ignore.sh; then use it wherever you need, but don't forget to create .gitignore and include there name of the files you need to be ignored
+#### For exercise 07
+create any file and add some context into it; then run diff (with or without option -u) file1 file2 > changes.patch or sw.diff; then cat the output file
+#### For exercise 08
+cat clean; then read comments
+
 ## Real-World Applications
 The skills developed in this project are directly applicable to:
 
-DevOps Engineering: Setting up automation scripts, managing permissions, and configuring version control are fundamental DevOps skills
-System Administration: Understanding file permissions, creating directory structures, and managing symbolic links are essential for system administrators
-Software Development Workflows: Proficiency with Git, SSH, and shell commands forms the foundation of modern development environments
-Security Practices: Learning about file permissions and SSH key management introduces important security concepts
-Automation: Creating shell scripts to automate repetitive tasks is valuable in virtually any technical role
-Troubleshooting: Understanding how to examine file differences, find specific files, and check file types are critical troubleshooting skills
+1. DevOps Engineering: Setting up automation scripts, managing permissions, and configuring version control are fundamental DevOps skills
+2. System Administration: Understanding file permissions, creating directory structures, and managing symbolic links are essential for system administrators
+3. Software Development Workflows: Proficiency with Git, SSH, and shell commands forms the foundation of modern development environments
+4. Security Practices: Learning about file permissions and SSH key management introduces important security concepts
+5. Automation: Creating shell scripts to automate repetitive tasks is valuable in virtually any technical role
+6. Troubleshooting: Understanding how to examine file differences, find specific files, and check file types are critical troubleshooting skills
 
 ## Conclusion
-While Shell 00 may appear simple, it establishes the fundamental command-line and version control skills that underpin virtually all software development and system administration tasks. Mastering these basics is essential before progressing to more complex programming concepts in the 42 curriculum.
+Shell 00 establishes the fundamental command-line and version control skills that underpin virtually all software development and system administration tasks.
 These skills are particularly valuable to employers as they demonstrate not just theoretical knowledge but practical capability with the everyday tools of software development. The ability to work efficiently in command-line environments and manage version control properly is often assumed but not always present in new developers.
