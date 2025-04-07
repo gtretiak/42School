@@ -9,47 +9,42 @@ This project aims to:
 4) Establish good practices for file management and documentation
 
 ## Key Concepts and Skills Demonstrated
-
-File Creation and Manipulation: Creating, modifying, and organizing files with specific content requirements
-File Permissions and Attributes: Understanding and setting Unix file permissions
-Directory Management: Creating directory structures and navigating the filesystem
-Git Version Control: Basic Git operations including commits, repository management, and configuration
-Regular Expressions: Using pattern matching with commands like find
-Symbolic Links: Creating and managing symbolic links
-Command Redirection: Manipulating input/output streams
-Shell Scripting: Writing simple shell scripts to automate tasks
+1) File Creation and Manipulation: Creating, modifying, and organizing files with specific content requirements
+2) File Permissions and Attributes: Understanding and setting Unix file permissions
+3) Directory Management: Creating directory structures and navigating the filesystem
+4) Git Version Control: Basic Git operations including commits, repository management, and configuration
+5) Regular Expressions: Using pattern matching with commands like find
+6) Symbolic Links: Creating and managing symbolic links
+7) Command Redirection: Manipulating input/output streams
+8) Shell Scripting: Writing simple shell scripts to automate tasks
 
 ## Exercise Breakdown
-
-ex00: Creating and printing on the standard output a file with specific content (touch, vim, cat)
-ex01: Setting specific file permissions, size, time-stamp and using tar for archiving (ls, touch, truncate, chmod, tar)
-ex02: Creating complex directory structures with specific permissions (mkdir, ln)
-ex03: Generating and managing SSH keys for secure authentication and using GIT
-ex04: Writing a command to list files in a specific format (ls)
-ex05: Creating a script to display recent Git commits (git log, #!/bin/bash)
-ex06: Developing a script to show files ignored by Git (git ls-files, .gitignore)
-ex07: Understanding file differences and patch operations (diff, sw.diff, patch, .patch)
-ex08: Using the find command to locate and remove temporary files (find)
+1) ex00: Creating and printing on the standard output a file with specific content (touch, vim, cat)
+2) ex01: Setting specific file permissions, size, time-stamp and using tar for archiving (ls, touch, truncate, chmod, tar)
+3) ex02: Creating complex directory structures with specific permissions (mkdir, ln)
+4) ex03: Generating and managing SSH keys for secure authentication and using GIT
+5) ex04: Writing a command to list files in a specific format (ls)
+6) ex05: Creating a script to display recent Git commits (git log, #!/bin/bash)
+7) ex06: Developing a script to show files ignored by Git (git ls-files, .gitignore)
+8) ex07: Understanding file differences and patch operations (diff, sw.diff, patch, .patch)
+9) ex08: Using the find command to locate and remove temporary files (find)
 
 ## Technical Approach
 This project employs a minimalist approach focusing on:
-
-Command Line Proficiency: Using built-in shell commands rather than high-level abstractions
-Scripting Efficiency: Creating concise, single-line commands where appropriate
-Permission Management: Precise control over file access rights
-Git Workflow: Structured approach to version control
+1) Command Line Proficiency: Using built-in shell commands rather than high-level abstractions
+2) Scripting Efficiency: Creating concise, single-line commands where appropriate
+3) Permission Management: Precise control over file access rights
+4) Git Workflow: Structured approach to version control
 
 ## Technologies Used
-
-Shell: /bin/sh (Bourne shell)
-Core Unix Commands: ls, cat, chmod, mkdir, touch, vim, tar, truncate, ln, etc.
-Git: Basic repository operations and configuration
-SSH: Key generation for secure authentication
-find: Pattern matching and file location
-file: File type identification
+1) Shell: /bin/sh (Bourne shell)
+2) Core Unix Commands: ls, cat, chmod, mkdir, touch, vim, tar, truncate, ln, etc.
+3) Git: Basic repository operations and configuration
+4) SSH: Key generation for secure authentication
+5) find: Pattern matching and file location
+6) file: File type identification
 
 ## Setup Instructions
-
 1. Clone this repository:
 git clone https://github.com/gtretiak/42School/blob/main/Piscine-2024/shell00
 2. cd shell00
@@ -77,7 +72,6 @@ cat clean; then read comments
 
 ## Real-World Applications
 The skills developed in this project are directly applicable to:
-
 1. DevOps Engineering: Setting up automation scripts, managing permissions, and configuring version control are fundamental DevOps skills
 2. System Administration: Understanding file permissions, creating directory structures, and managing symbolic links are essential for system administrators
 3. Software Development Workflows: Proficiency with Git, SSH, and shell commands forms the foundation of modern development environments
